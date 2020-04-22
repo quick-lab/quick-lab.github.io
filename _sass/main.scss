@@ -1,0 +1,115 @@
+/* Resets & fonts */
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  font-family: 'Source Serif Pro', sans-serif;
+}
+
+/* Grid layout */
+
+.wrapper {
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "content aside"
+    "footer footer";
+
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+
+  height: 100vh;
+}
+
+.wrapper > * {
+  padding: 10px;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+  background: lightgreen;
+}
+
+main {
+  grid-area: content;
+  text-align: left;
+  background: deepskyblue;
+  margin-left: 0.5rem;
+}
+
+aside {
+  grid-area: aside;
+  background: gold;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-areas:
+      "header"
+      "content"
+      "aside"
+      "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto /* Header */
+      1fr /* Content */
+      auto /* Sidebar */
+      auto; /* Footer */
+  }
+
+  main, aside {
+    margin: 0;
+  }
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > h1 {
+  padding: 10px;
+  margin: 0;
+  font-size: xxx-large;
+}
+
+header > h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.main-nav {
+  font-size: x-large;
+}
+
+.main-nav > a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: black
+}
+
+.main-nav > a:hover {
+  text-decoration: underline;
+}
+
+.main-nav > .current {
+  font-weight: bold;
+}
