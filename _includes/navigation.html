@@ -1,7 +1,9 @@
-<nav class="main-nav">
+<nav id="main-nav" class="main-nav">
+  <h4 class="responsive-nav-header"><a href="javascript:void(0);" onclick="showMobileNav();">Quick Lab <i class="fas fa-bars"></i></a></h4>
   {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+    <a class="main-nav-item" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
       {{ item.name }}
     </a>
   {% endfor %}
 </nav>
+<a href="javascript:void(0);" class="show-menu-btn" onclick="showMobileNav();"><i class="fas fa-bars"></i></a>

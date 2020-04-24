@@ -14,7 +14,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 300;
   font-family: 'Adamina', 'Source Serif Pro', sans-serif;
 }
@@ -104,22 +105,89 @@ header > h1 i {
 }
 
 .main-nav {
+  display: flex;
   font-size: large;
 }
 
-.main-nav > a {
+.main-nav-item {
   margin-right: 15px;
   padding: 3px 0;
   text-decoration: none;
   color: $mid-gray;
+  border-bottom: 2px solid white;
 }
 
-.main-nav > a:hover {
+.main-nav-item:hover {
   border-bottom: 2px solid $highlight-color;
 }
 
 .main-nav > .current {
   border-bottom: 2px solid $highlight-color;
+}
+
+/* Responsive menu */
+
+.show-menu-btn {
+  display: none;
+  float: right;
+  font-size: 20px;
+  color: $dark-gray;
+}
+
+.responsive-nav-header {
+  display: none;
+  border-bottom: 1px solid white;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+}
+
+.responsive-nav-header > a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.responsive-nav-header > a i {
+  float: right;
+  margin: 10px 15px 0 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background: $highlight-color;
+  }
+
+  .responsive-nav-header {
+    display: inline;
+  }
+
+  .main-nav.responsive-nav {
+    display: flex;
+  }
+
+  .main-nav-item {
+    margin-bottom: 5px;
+    color: white;
+    border-bottom: none;
+    padding: 7px 20px;
+    text-align: right;
+  }
+
+  .main-nav-item:hover {
+    border-bottom: none;
+  }
+
+  .show-menu-btn {
+    display: inline;
+  }
 }
 
 /* footer */
