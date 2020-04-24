@@ -5,6 +5,6 @@ function showMobileNav() {
   if (navElement.className === "main-nav") {
     navElement.className += " responsive-nav";
   } else {
-    navElement.className = "main-nav"
+    navElement.className = "main-nav";
   }
 }
