@@ -209,13 +209,8 @@ footer {
   padding: 15px 10px;
 }
 
-@media screen and (max-width: $mobile-screen-size) {
-  .footer-section {
-    flex: 1 100%;
-  }
-}
-
-.footer-address {
+.footer-address,
+.footer-email {
   border-right: 1px solid $subtle-gray;
 }
 
@@ -228,10 +223,6 @@ footer {
 .footer-address a {
   color: white;
   text-decoration: none;
-}
-
-.footer-email {
-  border-right: 1px solid $subtle-gray;
 }
 
 .footer-email > p a {
@@ -266,4 +257,15 @@ footer {
 .footer-icon {
   font-size: 3em;
   padding: 10px 0;
+}
+
+@media screen and (max-width: $mobile-screen-size) {
+  .footer-section {
+    flex: 1 100%;
+  }
+
+  .footer-address,
+  .footer-email {
+    border-right: 0;
+  }
 }
