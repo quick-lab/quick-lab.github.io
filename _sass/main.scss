@@ -30,7 +30,7 @@ h4 {
     "content aside"
     "footer footer";
 
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr 350px;
   grid-template-rows: auto 1fr auto;
   grid-gap: 10px;
 
@@ -56,6 +56,7 @@ main {
 aside {
   grid-area: aside;
   margin-right: 0.5rem;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
