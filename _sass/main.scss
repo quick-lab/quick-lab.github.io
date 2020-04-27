@@ -5,6 +5,7 @@ $dark-gray: #252525;
 $subtle-gray: #B6B6B6;
 $highlight-color: #66A1D2;
 $mid-gray: #565656;
+$mobile-screen-size: 813px;
 
 body {
   margin: 0;
@@ -59,7 +60,7 @@ aside {
   padding: 20px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: $mobile-screen-size) {
   .wrapper {
     grid-template-areas:
       "header"
@@ -155,7 +156,7 @@ header > h1 i {
   font-size: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $mobile-screen-size) {
   .main-nav {
     display: none;
     flex-direction: column;
@@ -208,7 +209,7 @@ footer {
   padding: 15px 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $mobile-screen-size) {
   .footer-section {
     flex: 1 100%;
   }
