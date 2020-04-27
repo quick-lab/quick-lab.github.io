@@ -17,3 +17,13 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
