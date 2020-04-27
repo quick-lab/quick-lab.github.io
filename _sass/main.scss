@@ -5,7 +5,7 @@ $dark-gray: #252525;
 $subtle-gray: #B6B6B6;
 $highlight-color: #66A1D2;
 $mid-gray: #565656;
-$mobile-screen-size: 813px;
+$mobile-screen-size: 740px;
 
 body {
   margin: 0;
@@ -199,7 +199,7 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  align-items: stetch;
+  align-items: stretch;
 }
 
 .footer-section {
